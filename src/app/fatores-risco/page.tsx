@@ -50,7 +50,7 @@ export default function FatoresRiscoPage() {
 
       <main className="flex-grow p-6">
         <h2 className="text-2xl font-bold text-gray-800 mb-6">
-          Um resumo breve sobre CPRE e o motivo pelo qual ela deve ser considerado
+          Perguntas sobre a cirurgia
         </h2>
         
         <div className="space-y-4">
