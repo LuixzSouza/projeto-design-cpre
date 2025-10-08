@@ -10,7 +10,6 @@ const StatusBar = () => {
   useEffect(() => {
     const updateClock = () => {
       const now = new Date();
-      // A correção é aqui: adicionamos o tipo explícito ao objeto options
       const options: Intl.DateTimeFormatOptions = { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'America/Sao_Paulo' };
       setTime(new Intl.DateTimeFormat('pt-BR', options).format(now));
     };
@@ -20,6 +19,7 @@ const StatusBar = () => {
   }, []);
 
   return (
+    // A StatusBar agora é um flex container por padrão
     <div className="relative w-full h-11 flex justify-between items-center px-6 text-sm font-bold text-gray-900 flex-shrink-0 z-10">
       <span className="w-12 text-left">{time}</span>
       <div className="absolute left-1/2 -translate-x-1/2 h-8 w-32 bg-black rounded-full" />
@@ -34,9 +34,21 @@ const StatusBar = () => {
 
 const MobileFrame = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="min-h-screen w-full bg-gray-800 flex items-center justify-center p-4">
-      <div className="w-full max-w-sm h-[85vh] max-h-[900px] bg-white rounded-[40px] shadow-2xl overflow-hidden ring-4 ring-gray-900 flex flex-col">
-        <StatusBar />
+    // MUDANÇA 1: O fundo cinza e o padding só aparecem em telas médias (md) ou maiores
+    <div className="min-h-screen w-full bg-white md:bg-gray-800 flex items-center justify-center md:p-4">
+      
+      {/* MUDANÇA 2: 
+        - No celular (padrão): Ocupa 100% da tela (h-screen), sem estilos de moldura.
+        - No desktop (md:): Volta a ter altura e largura limitadas, bordas arredondadas, sombra, etc.
+      */}
+      <div className="w-full h-screen bg-white flex flex-col md:max-w-sm md:h-[85vh] md:max-h-[900px] md:rounded-[40px] md:shadow-2xl md:overflow-hidden md:ring-4 md:ring-gray-900">
+        
+        {/* MUDANÇA 3: A StatusBar fica escondida em telas pequenas e só aparece a partir de 'md' */}
+        <div className="hidden md:flex">
+          <StatusBar />
+        </div>
+
+        {/* Esta parte não precisa de alteração, funciona bem nos dois casos */}
         <div className="w-full flex-grow overflow-y-auto no-scrollbar min-h-0">
           {children}
         </div>

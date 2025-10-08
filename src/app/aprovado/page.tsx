@@ -54,14 +54,15 @@ export default function AprovadoPage() {
 
       {/* Rodapé com o botão */}
       <footer className="p-6 bg-white">
-        <div className="w-full max-w-sm mx-auto">
+        <div className="w-full">
           {/* O Link envolve o botão para navegação */}
           {/* Eu removi o <div> interno e legacyBehavior, como na correção anterior */}
           <Link 
             href="/indicacao" 
-            className="fonte-inter text-center w-full bg-white text-[#2A377D] font-semibold py-3 rounded-2xl border border-[#B0B8D9] shadow-sm hover:bg-gray-50 transition-all duration-300"
-          >
-            Cancelar
+            >
+            <div className="fonte-inter text-center w-full bg-white text-[#2A377D] font-semibold py-3 rounded-2xl border border-[#B0B8D9] shadow-sm hover:bg-gray-50 transition-all duration-300" >
+              Cancelar
+            </div>
           </Link>
         </div>
       </footer>

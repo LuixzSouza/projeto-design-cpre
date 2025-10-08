@@ -5,7 +5,7 @@ import Link from 'next/link'; // 1. Importe o Link
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-[80vh] items-center justify-center bg-[#F0F4FF] p-8">
+    <main className="flex flex-col h-full md:min-h-[80vh] items-center justify-center bg-[#F0F4FF] p-8">
       <div className="flex flex-col items-center justify-center flex-grow">
         <Logo />
       </div>
