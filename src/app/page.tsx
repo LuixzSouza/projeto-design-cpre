@@ -14,14 +14,14 @@ export default function Home() {
         {/* 2. Envolva o botão Iniciar com o Link */}
         <Link href="/indicacao">
           <button
-            className="fonte-inter w-full bg-[#2A377D] text-white font-semibold py-3 rounded-2xl shadow-lg hover:bg-opacity-90 transition-all duration-300"
+            className="fonte-inter w-full bg-[#2A377D] text-white font-semibold py-3 rounded-2xl shadow-lg hover:bg-opacity-90 transition-all duration-300 cursor-pointer hover:bg-[#475ac7]"
           >
             Iniciar
           </button>
         </Link>
         
         <button
-          className="fonte-inter w-full bg-white text-[#2A377D] font-semibold py-3 rounded-2xl border border-[#B0B8D9] shadow-sm hover:bg-gray-50 transition-all duration-300"
+          className="fonte-inter w-full bg-white text-[#2A377D] font-semibold py-3 rounded-2xl border border-[#B0B8D9] shadow-sm cursor-pointer transition-all duration-300"
         >
           Entrar com o Google
         </button>

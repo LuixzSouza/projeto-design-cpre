@@ -13,13 +13,13 @@ const QuestionToggle = ({ label, value, onChange }: QuestionToggleProps) => {
       <span className="text-gray-700 font-medium">{label}</span>
 
       {/* Container principal do toggle com fundo azul e bordas arredondadas */}
-      <div className="relative flex items-center bg-[#10296E] rounded-2xl">
+      <div className="relative flex items-center bg-[#10296E] rounded-2xl cursor-pointer hover:bg-[#475ac7">
         
         {/* Elemento branco que desliza. `aria-hidden` para acessibilidade. */}
         <span
           className={`
-            absolute top-0 left-0 h-full w-1/2 bg-[#F0F3F8] border border-[#10296E] rounded-2xl
-            shadow-md transition-transform duration-300 ease-in-out
+            absolute top-0 left-0 h-full w-1/2 bg-[#F0F3F8] border border-[#10296E] rounded-2xl 
+            shadow-md transition-transform duration-300 ease-in-out cursor-pointer
             transform ${value ? "translate-x-0" : "translate-x-full"}
           `}
           aria-hidden="true"
@@ -29,7 +29,7 @@ const QuestionToggle = ({ label, value, onChange }: QuestionToggleProps) => {
         <button
           onClick={() => onChange(true)}
           // `z-10` garante que o texto fique sobre o fundo branco
-          className={`relative z-10 px-6 py-2 font-bold transition-colors duration-300 ${
+          className={`relative z-10 px-6 py-2 font-bold transition-colors cursor-pointer duration-300 ${
             value ? "text-[#10296E]" : "text-white"
           }`}
         >
@@ -39,7 +39,7 @@ const QuestionToggle = ({ label, value, onChange }: QuestionToggleProps) => {
         {/* Botão NÃO */}
         <button
           onClick={() => onChange(false)}
-          className={`relative z-10 px-6 py-2 font-bold transition-colors duration-300 ${
+          className={`relative z-10 px-6 py-2 font-bold transition-colors duration-300 cursor-pointer ${
             !value ? "text-[#10296E]" : "text-white"
           }`}
         >

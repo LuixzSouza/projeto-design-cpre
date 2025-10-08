@@ -60,7 +60,7 @@ export default function AprovadoPage() {
           <Link 
             href="/indicacao" 
             >
-            <div className="fonte-inter text-center w-full bg-white text-[#2A377D] font-semibold py-3 rounded-2xl border border-[#B0B8D9] shadow-sm hover:bg-gray-50 transition-all duration-300" >
+            <div className="fonte-inter text-center w-full bg-white text-[#2A377D] font-semibold py-3 rounded-2xl border border-[#B0B8D9] shadow-sm hover:bg-gray-50 transition-all duration-300 cursor-pointer" >
               Cancelar
             </div>
           </Link>

@@ -75,13 +75,13 @@ export default function IndicacaoPage() {
         <div className="w-full max-w-sm mx-auto flex flex-col gap-4">
           <button
             onClick={handleConfirm}
-            className="w-full bg-[#10296E] text-white font-semibold py-3 rounded-2xl shadow-lg hover:bg-opacity-90 transition-all duration-300"
+            className="w-full bg-[#10296E] text-white font-semibold py-3 rounded-2xl shadow-lg transition-all duration-300 cursor-pointer hover:bg-[#475ac7"
           >
             Confirmar
           </button>
           <button
             onClick={() => router.push('/')} // Botão Cancelar volta para a home
-            className="w-full bg-white text-[#10296E] font-semibold py-3 rounded-2xl border border-[#B0B8D9] shadow-sm hover:bg-gray-50 transition-all duration-300"
+            className="w-full bg-white text-[#10296E] font-semibold py-3 rounded-2xl border border-[#B0B8D9] shadow-sm hover:bg-gray-50 transition-all duration-300 cursor-pointer"
           >
             Cancelar
           </button>

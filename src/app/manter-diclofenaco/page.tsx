@@ -39,13 +39,13 @@ export default function ManterDiclofenacoPage() {
         <div className="w-full max-w-sm mx-auto flex gap-4">
           <button
             onClick={() => router.push('/fatores-risco')}
-            className="w-1/2 bg-white text-[#1E3A8A] font-semibold py-3 rounded-full border border-[#B0B8D9] shadow-sm hover:bg-gray-50 transition-all duration-300"
+            className="w-1/2 bg-white text-[#1E3A8A] font-semibold py-3 rounded-full border border-[#B0B8D9] shadow-sm hover:bg-gray-50 transition-all duration-300 cursor-pointer"
           >
             Cancelar
           </button>
           <button
             onClick={() => alert("Fluxo finalizado ou próxima ação.")}
-            className="w-1/2 bg-[#1E3A8A] text-white font-semibold py-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300"
+            className="w-1/2 bg-[#1E3A8A] text-white font-semibold py-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300 cursor-pointer"
           >
             Confirmar
           </button>
